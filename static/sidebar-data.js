@@ -8,8 +8,8 @@ export default [
         href: "/"
     },
     {
-        title: "Backend Structure",
-        href: "/getting-started/backend-structure"
+        title: "App Architecture",
+        href: "/getting-started/app-architecture"
     },
     {
         title: "API Prerequisites",

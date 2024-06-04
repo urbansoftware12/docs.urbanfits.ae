@@ -17,11 +17,16 @@ export default function Navbar() {
 
     return <>
         <nav className="sticky z-50 top-0 bg-white/30 border-b border-gray-200 dark:bg-zinc-950/30 dark:border-white/10 backdrop-blur-sm w-full px-6 py-3 flex justify-between items-center shadow-md select-none">
-            <div className="flex items-center gap-x-10">
+            <div className="flex items-center">
                 <h1 className="text-lg font-semibold">Urban Fits API Docs</h1>
-                <Link target="_blank" href="https://urbanfits.ae">
+                <Link target="_blank" href="https://urbanfits.ae" className="ml-10">
                     <Button variant="outline" size="sm" className="text-xs whitespace-nowrap">
-                        Visit Urban Fits&nbsp;&nbsp;&nbsp; <SquareArrowOutUpRight className="h-[1rem] w-[1rem]" />
+                        Visit Urban Fits&nbsp;&nbsp;&nbsp; <SquareArrowOutUpRight className="size-3" />
+                    </Button>
+                </Link>
+                <Link target="_blank" href="https://admin.urbanfits.ae" className="ml-4">
+                    <Button variant="outline" size="sm" className="text-xs whitespace-nowrap">
+                        Visit UF Admin Panel Fits&nbsp;&nbsp;&nbsp; <SquareArrowOutUpRight className="size-3" />
                     </Button>
                 </Link>
             </div>
@@ -30,8 +35,8 @@ export default function Navbar() {
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <Button variant="outline" size="icon">
-                            <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                            <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                            <Sun className="size-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                            <Moon className="absolute size-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
                             <span className="sr-only">Toggle theme</span>
                         </Button>
                     </DropdownMenuTrigger>

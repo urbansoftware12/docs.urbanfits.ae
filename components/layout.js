@@ -23,11 +23,11 @@ export default function MainLayout({ children }) {
                     </div>
                 </ScrollArea>
             </section>
-            <section className="w-[75%] p-10">
+            <section className="w-[75%] p-10 pr-20 xl:pr-28">
                 {children}
             </section>
         </main>
-        <footer className="w-full px-6 py-10 flex flex-col gap-3 text-sm border-t border-gray-200 dark:border-white/10">
+        <footer className="w-full px-6 py-10 flex flex-col gap-1 text-xs border-t border-gray-200 dark:border-white/10 text-slate-500">
             <span>Urban Fits API Documentation</span>
             <span>Developed by Faizan on Next JS</span>
         </footer>
