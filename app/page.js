@@ -10,7 +10,7 @@ export default function Home() {
         <p className="leading-7 [&:not(:first-child)]:mt-6">Welcome to the Urban Fits API Documentation! <b>Urban Fits</b> is an E-commerce website developed on <b>Next JS</b>.</p>
         <Image src={UFHomeImg} alt="urbanfits-homepage" placeholder="blur" className="w-3/4 mx-auto my-10 rounded-lg border select-none pointer-events-none" />
 
-        <h1 className="font-bold text-2xl tracking-tight">Features</h1>
+        <h2 className="font-bold text-2xl tracking-tight">Features</h2>
         <p className="leading-7 mt-4 mb-2">Apart from a typical e-commerce experience, from development point of view, it has <br /> a bunch of other honorable mentions:</p>
         <ul className="list-inside list-disc text-sm leading-7">
             <li>In app reward system - <b>UF Points</b></li>
