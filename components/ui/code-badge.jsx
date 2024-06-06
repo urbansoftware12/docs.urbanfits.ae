@@ -1,2 +1,2 @@
 import { incons } from "@/app/layout";
-export default ({ children }) => <code className={incons.className + " text-orange-500 px-1.5 py-0.5 bg-gray-200 dark:bg-white/20 rounded-md leading-tight"}>{children}</code>
+export default ({ children, color = "text-orange-500" }) => <code className={incons.className + ` self-start ${color} px-1.5 py-0.5 bg-gray-200 dark:bg-white/20 rounded-md leading-tight`}>{children}</code>

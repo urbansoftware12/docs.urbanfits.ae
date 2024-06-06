@@ -2,7 +2,6 @@
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { usePathname } from "next/navigation";
 import Navbar from "./navbar";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "./ui/button";
 import { Github } from "lucide-react";
 import sidebarData from "@/static/sidebar-data";
@@ -13,9 +12,9 @@ export default function MainLayout({ children }) {
 
     return <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
         <Navbar />
-        <main className="w-full min-h-screen flex justify-between">
-            <section className="w-[25%] border-r border-gray-200 dark:border-white/10 px-8 py-10 overflow-x-hidden overflow-y-auto">
-                <ScrollArea className="w-full h-screen">
+        <main className="w-full min-h-screen flex justify-between transition-all duration-300">
+            <section className="w-[25%] border-r border-gray-200 dark:border-white/10 px-8 py-10">
+                <div className="sticky top-20 w-full max-h-screen">
                     <div className="p-4 flex flex-col">
                         {sidebarData.map((item, index) => {
                             if (item.menuHeading) return <h4 key={index} className={`${index == 0 ? "mb-4" : "my-4"} text-sm font-bold leading-none select-none`}>{item.title}</h4>
@@ -24,7 +23,7 @@ export default function MainLayout({ children }) {
                             </Link>
                         })}
                     </div>
-                </ScrollArea>
+                </div>
             </section>
             <section className="w-[75%] p-10 pr-20 xl:pr-28">
                 {children}

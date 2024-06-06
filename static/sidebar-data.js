@@ -16,6 +16,10 @@ export default [
         href: "/getting-started/api-prerequisites"
     },
     {
+        title: "Github Repositories",
+        href: "/getting-started/github-repositories"
+    },
+    {
         title: "Auth Endpoints",
         menuHeading: true
     },
@@ -38,5 +42,13 @@ export default [
     {
         title: "User Endpoints",
         menuHeading: true
+    },
+    {
+        title: "Get Me",
+        href: "/user-endpoints/get-me"
+    },
+    {
+        title: "Update User",
+        href: "/user-endpoints/update-user"
     },
 ]
