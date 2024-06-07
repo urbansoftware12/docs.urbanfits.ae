@@ -16,8 +16,10 @@ export default function page() {
         <p className="leading-7 my-2">No payload required although for successful response, the <CodeBadge>session-token</CodeBadge> cookie header must be included in the request headers.</p>
 
 
-        <h3 className="mt-4 mb-2 font-semibold text-lg tracking-tight">Response</h3>
-        <CodeBlock>{`{
+        <section className="w-full flex flex-col">
+            <h3 className="mt-4 mb-2 font-semibold text-lg tracking-tight">Response</h3>
+            <span className="leading-7 my-2 text-green-400">Successful Response</span>
+            <CodeBlock>{`{
     "success": true,
     "msg": "You are Logged in successfully !",
     "user": {
@@ -39,7 +41,7 @@ export default function page() {
             "next_uf_spin": "2024-05-11T00:00:00.000Z"
         },
         "last_checkin": "2024-05-21T23:59:59.999Z",
-        "timezone": "Asia/Karachi",
+        "timezone": "Asia/Dubai",
         "user_agent": "eyJhbGciOiJIUzI1NiJ9.UG9zdG1hblJ1bnRpbWUvNy4zNy4z.lYd97Uv60STIestaaO3UO_aiP7G10yEmi_XG22KbOPo",
         "purchases": 7,
         "createdAt": "2024-02-27T00:00:00.000Z",
@@ -51,6 +53,15 @@ export default function page() {
         "title": "Mr."
     }
 }`}</CodeBlock>
+
+
+            <span className="leading-7 my-2 text-red-400">Invalid Session</span>
+            <p className="leading-7 mb-2">In case of absence of <CodeBadge>session-token</CodeBadge> in request headers or if the sessions token is expired, then any personalized API return this response indicating that the user session is no longer accepted and user needs to login again.</p>
+            <CodeBlock>{`{
+        "success": false,
+        "msg": "Your session is invalid or expired. Please sign in again."
+}`}</CodeBlock>
+        </section>
 
         <div className="w-full mt-20 flex justify-between">
             <Link href="/auth-endpoints/google-login">

@@ -40,6 +40,14 @@ export default [
         href: "/auth-endpoints/google-login"
     },
     {
+        title: "Forgot Password",
+        href: "/auth-endpoints/forgot-password"
+    },
+    {
+        title: "Change Email",
+        href: "/auth-endpoints/change-email"
+    },
+    {
         title: "User Endpoints",
         menuHeading: true
     },

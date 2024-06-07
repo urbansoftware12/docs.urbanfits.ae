@@ -44,7 +44,7 @@ export default function page() {
             "next_uf_spin": "2024-05-11T00:00:00.000Z"
         },
         "last_checkin": "2024-05-21T23:59:59.999Z",
-        "timezone": "Asia/Karachi",
+        "timezone": "Asia/Dubai",
         "user_agent": "eyJhbGciOiJIUzI1NiJ9.UG9zdG1hblJ1bnRpbWUvNy4zNy4z.lYd97Uv60STIestaaO3UO_aiP7G10yEmi_XG22KbOPo",
         "purchases": 7,
         "createdAt": "2024-02-27T00:00:00.000Z",

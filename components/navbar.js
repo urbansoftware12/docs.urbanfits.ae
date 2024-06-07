@@ -16,7 +16,7 @@ export default function Navbar() {
     const { setTheme } = useTheme();
 
     return <>
-        <nav className="sticky z-50 top-0 bg-white/30 border-b border-gray-200 dark:bg-zinc-950/30 dark:border-white/10 backdrop-blur-sm w-full px-6 py-3 flex justify-between items-center shadow-md select-none">
+        <nav className="sticky z-50 top-0 bg-white/30 border-b border-gray-200 dark:bg-zinc-950/30 dark:border-white/10 backdrop-blur-sm w-full px-6 py-3 flex justify-between items-center shadow-md select-none transition-all duration-300">
             <div className="flex items-center">
                 <h1 className="text-lg font-semibold">Urban Fits API Docs</h1>
                 <Link target="_blank" href="https://urbanfits.ae" className="ml-10">

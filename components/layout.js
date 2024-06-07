@@ -34,7 +34,7 @@ export default function MainLayout({ children }) {
                 <span>Urban Fits API Documentation</span>
                 <span>Developed by Faizan on Next JS</span>
             </div>
-            <Link href="github-repositories">
+            <Link href="/getting-started/github-repositories">
                 <Button variant="secondary"><Github className="size-5" />&nbsp;&nbsp; Github Repositories</Button>
             </Link>
         </footer>
