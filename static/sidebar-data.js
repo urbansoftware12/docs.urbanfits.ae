@@ -48,6 +48,27 @@ export default [
         href: "/auth-endpoints/change-email"
     },
     {
+        title: "2FA",
+        menuHeading: true
+    },
+    {
+        title: "Register 2FA",
+        href: "/2fa/register-2fa"
+    },
+    {
+        title: "Reset user 2FA",
+        href: "/2fa/reset-2fa",
+        admin: true
+    },
+    {
+        title: "Update 2FA",
+        href: "/2fa/update-2fa"
+    },
+    {
+        title: "Verify TOTP",
+        href: "/2fa/verify-totp"
+    },
+    {
         title: "User Endpoints",
         menuHeading: true
     },

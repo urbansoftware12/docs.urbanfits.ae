@@ -97,8 +97,8 @@ export default function page() {
             <Link href="/auth-endpoints/forgot-password">
                 <Button variant="outline"><ChevronLeft className="w-5" />&nbsp;&nbsp;Forgot Password API</Button>
             </Link>
-            <Link href="/user-endpoints/get-me">
-                <Button variant="outline">Get Me API &nbsp;&nbsp; <ChevronRight className="w-5" /></Button>
+            <Link href="/2fa/register-2fa">
+                <Button variant="outline">Register 2FA API &nbsp;&nbsp; <ChevronRight className="w-5" /></Button>
             </Link>
         </div>
     </>
