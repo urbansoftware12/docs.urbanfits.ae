@@ -48,6 +48,10 @@ export default [
         href: "/auth-endpoints/change-email"
     },
     {
+        title: "Logout",
+        href: "/auth-endpoints/logout"
+    },
+    {
         title: "2FA",
         menuHeading: true
     },

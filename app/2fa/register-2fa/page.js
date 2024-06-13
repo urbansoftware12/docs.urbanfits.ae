@@ -59,8 +59,8 @@ export default function page() {
         </section>
 
         <div className="w-full mt-20 flex justify-between">
-            <Link href="/auth-endpoints/change-email">
-                <Button variant="outline"><ChevronLeft className="w-5" />&nbsp;&nbsp;Change Email API</Button>
+            <Link href="/auth-endpoints/logout">
+                <Button variant="outline"><ChevronLeft className="w-5" />&nbsp;&nbsp;Logout API</Button>
             </Link>
             <Link href="/2fa/reset-2fa">
                 <Button variant="outline">Reset User 2FA&nbsp;&nbsp; <ChevronRight className="w-5" /></Button>
