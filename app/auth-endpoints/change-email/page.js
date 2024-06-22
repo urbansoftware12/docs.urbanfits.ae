@@ -19,6 +19,7 @@ export default function page() {
             <p><CodeBadge color="text-green-400">PUT</CodeBadge> <CodeBadge>/auth/otp/auth-email</CodeBadge></p>
 
             <h3 className="mt-4 mb-2 font-semibold text-lg tracking-tight">Payload</h3>
+            <p className="leading-7 my-2">Remember that the user should be logged in and the <CodeBadge>session-token</CodeBadge> cookies headers need to be sent to <CodeBadge>auth-email</CodeBadge> API.</p>
             <CodeBlock>{`{
     "new_email": "new.email@example.com",
     "password": "12345678" // Current password of the user
@@ -94,8 +95,8 @@ export default function page() {
         </section>
 
         <div className="w-full mt-20 flex justify-between">
-            <Link href="/auth-endpoints/forgot-password">
-                <Button variant="outline"><ChevronLeft className="w-5" />&nbsp;&nbsp;Forgot Password API</Button>
+            <Link href="/user-endpoints/get-me">
+                <Button variant="outline"><ChevronLeft className="w-5" />&nbsp;&nbsp;Get Me API</Button>
             </Link>
             <Link href="/auth-endpoints/logout">
                 <Button variant="outline">Logout API &nbsp;&nbsp; <ChevronRight className="w-5" /></Button>

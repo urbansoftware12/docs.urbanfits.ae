@@ -61,8 +61,8 @@ export default function page() {
             <Link href="/getting-started/app-architecture">
                 <Button variant="outline"><ChevronLeft className="w-5" />&nbsp;&nbsp;App Architecture</Button>
             </Link>
-            <Link href="/auth-endpoints/signup">
-                <Button variant="outline">Auth Endpoints / Signup &nbsp;&nbsp; <ChevronRight className="w-5" /></Button>
+            <Link href="/getting-started/socket-setup">
+                <Button variant="outline">Socket Setup &nbsp;&nbsp; <ChevronRight className="w-5" /></Button>
             </Link>
         </div>
     </>

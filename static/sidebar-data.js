@@ -16,6 +16,10 @@ export default [
         href: "/getting-started/api-prerequisites"
     },
     {
+        title: "Socket Setup",
+        href: "/getting-started/socket-setup"
+    },
+    {
         title: "Github Repositories",
         href: "/getting-started/github-repositories"
     },
@@ -83,5 +87,13 @@ export default [
     {
         title: "Update User",
         href: "/user-endpoints/update-user"
+    },
+    {
+        title: "Addresses",
+        href: "/user-endpoints/user-addresses"
+    },
+    {
+        title: "Notifications",
+        href: "/user-endpoints/user-notifications"
     },
 ]
