@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import sidebarData from "@/static/sidebar-data";
+import { flatMenu } from "@/static/sidebar-data";
 import Link from "next/link";
 
 export function SearchModalBtn() {
@@ -33,7 +33,7 @@ export function SearchModalBtn() {
             <Input className="w-full pt-4 border-none rounded-b-none" onChange={(e) => setQuery(e.target.value)} value={query} placeholder="Search here the keywords..." />
             <ScrollArea className="w-full h-[40vh] p-4 flex flex-col border-t border-gray-100 dark:border-white/20">
                 {!query ? <div className="w-full text-center">No results :(</div>
-                    : sidebarData.filter(item => {
+                    : flatMenu.filter(item => {
                         const title = item.title.toLowerCase();
                         const searchQuery = query.toLowerCase();
                         return (title.includes(searchQuery) || query.includes(title)) && !item.menuHeading

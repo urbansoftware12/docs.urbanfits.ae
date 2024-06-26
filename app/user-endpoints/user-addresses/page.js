@@ -54,7 +54,7 @@ export default function page() {
             <p><CodeBadge color="text-green-400">PUT</CodeBadge> <CodeBadge>/user/addresses/update</CodeBadge></p>
 
             <h3 className="mt-4 mb-2 font-semibold text-lg tracking-tight">Payload</h3>
-            <p className="leading-7 my-2">For instance we are updaing the second address as <b>Office</b> address. It will be saved along with the previous <b>Home</b> address as well. In short only that data can be sent which needs to be updated.</p>
+            <p className="leading-7 my-2">For instance we are updating the second address as <b>Office</b> address. It will be saved along with the previous <b>Home</b> address as well. In short only that data can be sent which needs to be updated.</p>
             <CodeBlock>{`{
     "address1": {
         "address_title": "Office",

@@ -13,12 +13,11 @@ export default function page() {
         <CodeBadge color="text-green-400">GET</CodeBadge> <CodeBadge>/user/update</CodeBadge>
 
         <h3 className="mt-4 mb-2 font-semibold text-lg tracking-tight">Payload</h3>
-        <p className="leading-7 my-2">In the payload, the same properties need to be sent with different values to update. There are 2 important things to be noted about it;
-            <ul className="mb-2 pl-4 list-outside list-disc text-sm leading-7">
-                <li>You don't need to submit full user object along with previous and the new values. Just submit those values which you need to update.</li>
-                <li>But the to update the <CodeBadge>image</CodeBadge> will be a little different. You will need to first upload the image on the S3 cloud using separate API which will return you back the relative url of the image, then update that url in this API. Please refer the <Link href="/" className="text-blue-600 underline underline-offset-4">Image Upload API</Link>.</li>
-            </ul>
-        </p>
+        <p className="leading-7 my-2">In the payload, the same properties need to be sent with different values to update. There are 2 important things to be noted about it;</p>
+        <ul className="mb-2 pl-4 list-outside list-disc text-sm leading-7">
+            <li>You don't need to submit full user object along with previous and the new values. Just submit those values which you need to update.</li>
+            <li>But the to update the <CodeBadge>image</CodeBadge> will be a little different. You will need to first upload the image on the S3 cloud using separate API which will return you back the relative url of the image, then update that url in this API. Please refer the <Link href="/" className="text-blue-600 underline underline-offset-4">Image Upload API</Link>.</li>
+        </ul>
         <CodeBlock>{`{
         "image": "/user-profiles/65ddb7496a09ca290bec88b2", // Remeber that in order to update the image url, first you need to upload the image using a separate API and then update the url in here.
         "phone_prefix": "+971",

@@ -50,7 +50,7 @@ export default function page() {
             <li>https://localhost:3001</li>
         </ul>
 
-        <h2 className="mt-6 font-bold text-2xl tracking-tight">Images Usage</h2>
+        <h2 id="images-usage" className="mt-6 font-bold text-2xl tracking-tight">Images Usage</h2>
         <p className="leading-7 [&:not(:first-child)]:mt-4">
             The Backend uses <b>AWS S3</b> cloud storage to store the all kinds of images whether its users', product images, UF-Tasks Image submition or any other carousel images. <br />
             There will be a fixed <b>Base Image URL</b> i.e. <CodeBadge>https://urban-fits.s3.ap-south-1.amazonaws.com</CodeBadge>. Every stored image record from any API response will have a partial image url relative this base url. In order to use images, this base image url must be prefixed to the url obtained in response. <br /> <br />
