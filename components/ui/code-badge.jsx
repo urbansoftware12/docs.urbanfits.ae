@@ -1,2 +1,2 @@
 import { incons } from "@/app/layout";
-export default function CodeBadage({ children, color = "text-orange-600 dark:text-orange-500" }) { return <code className={incons.className + ` self-start ${color} px-1.5 py-0.5 bg-gray-200 dark:bg-white/20 whitespace-nowrap rounded-md leading-tight`}>{children}</code> }
+export default function CodeBadage({ children, flexDefault, color = "text-orange-600 dark:text-orange-500" }) { return <code className={incons.className + ` ${!flexDefault && "self-start"} ${color} px-1.5 py-0.5 bg-gray-200 dark:bg-white/20 whitespace-nowrap rounded-md leading-tight`}>{children}</code> }

@@ -10,13 +10,11 @@ import Link from "next/link";
 
 const MenuItem = ({ index, item, path }) => {
     const [open, setOpen] = useState(false);
-    const menuMaxHeight = `max-h-[${item.subMenu.length * 36}px]`;
-    console.log(menuMaxHeight)
     return <>
         <Button key={index} onClick={() => setOpen(prev => !prev)} variant="ghost" className={"text-left justify-between text-sm font-bold leading-none select-none"}>{item.title} <CircleChevronRight className={`size-5 ${open ? "rotate-90" : "opacity-45"} transition-all duration-300`} /></Button>
-        <div style={{ maxHeight: `${open ? item.subMenu.length * 40 : 0}px` }} className={`${open ?"mb-4 pl-4 pt-1": "scale-90"} origin-bottom-left w-full transition-all duration-500 overflow-hidden`}>
+        <div style={{ maxHeight: `${open ? item.subMenu.length * 40 : 0}px` }} className={`${open ? "mb-4 pl-4 pt-1" : "scale-90"} origin-bottom-left w-full transition-all duration-500 overflow-hidden`}>
             {item.subMenu.map((subItem, subIndex) => <Link key={index + "-sub-item-" + subIndex} href={subItem.href} className="w-full">
-                <Button variant={path == item.href ? "secondary" : "ghost"} size="sm" className={`${path !== item.href && "opacity-60"} w-full text-left justify-start text-sm`}>{subItem.title} {subItem.admin && <span className="ml-2 px-1.5 py-0.5 text-red-600 dark:text-red-400 bg-red-200 dark:bg-red-200/30 rounded-md leading-tight text-[10px]">admin</span>}</Button>
+                <Button variant={path == subItem.href ? "secondary" : "ghost"} size="sm" className={`${path !== item.href && "opacity-60"} w-full text-left justify-start text-sm`}>{subItem.title} {subItem.admin && <span className="ml-2 px-1.5 py-0.5 text-red-600 dark:text-red-400 bg-red-200 dark:bg-red-200/30 rounded-md leading-tight text-[10px]">admin</span>}</Button>
             </Link>)}
         </div>
     </>
@@ -24,7 +22,6 @@ const MenuItem = ({ index, item, path }) => {
 
 export default function MainLayout({ children }) {
     const path = usePathname();
-
     return <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
         <Navbar />
         <main className="w-full min-h-screen flex justify-between transition-all duration-300">

@@ -105,6 +105,20 @@ export default [
         ]
     },
     {
+        title: "Products",
+        menuHeading: true,
+        subMenu: [
+            {
+                title: "Get Products",
+                href: "/products/get-products"
+            },
+            {
+                title: "Reviews",
+                href: "/products/reviews"
+            },
+        ]
+    },
+    {
         title: "Services",
         menuHeading: true,
         subMenu: [
