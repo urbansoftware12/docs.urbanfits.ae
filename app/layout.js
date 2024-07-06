@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/styles/globals.css";
 import { Inconsolata, Open_Sans } from "next/font/google";
 import MainLayout from "@/components/layout";
 

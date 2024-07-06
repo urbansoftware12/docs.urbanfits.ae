@@ -557,11 +557,11 @@ export default function page() {
         </section>
 
         <div className="w-full mt-20 flex justify-between">
-            <Link href="/user-endpoints/get-me">
-                <Button variant="outline"><ChevronLeft className="w-5" />&nbsp;&nbsp;Get Me API</Button>
-            </Link>
             <Link href="/user-endpoints/user-notifications">
-                <Button variant="outline">User Notifications &nbsp;&nbsp; <ChevronRight className="w-5" /></Button>
+                <Button variant="outline"><ChevronLeft className="w-5" />&nbsp;&nbsp;User Endpoints / User Notifications</Button>
+            </Link>
+            <Link href="/products/reviews">
+                <Button variant="outline">Product Reviews &nbsp;&nbsp; <ChevronRight className="w-5" /></Button>
             </Link>
         </div>
     </>

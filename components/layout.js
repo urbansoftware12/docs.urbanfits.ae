@@ -1,9 +1,10 @@
 "use client"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { usePathname } from "next/navigation";
 import Navbar from "./navbar";
 import { Button } from "./ui/button";
+import ToTopBtn from "./scroll-top-btn";
 import { Github, CircleChevronRight } from "lucide-react";
 import sidebarData from "@/static/sidebar-data";
 import Link from "next/link";
@@ -22,8 +23,12 @@ const MenuItem = ({ index, item, path }) => {
 
 export default function MainLayout({ children }) {
     const path = usePathname();
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => { setIsClient(true) }, []);
+    
     return <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
         <Navbar />
+        {isClient && <ToTopBtn />}
         <main className="w-full min-h-screen flex justify-between transition-all duration-300">
             <section className="w-[22%] border-r border-gray-200 dark:border-white/10 px-8 py-10">
                 <div className="sticky top-20 w-full max-h-[75vh] overflow-hidden hover:overflow-y-auto">

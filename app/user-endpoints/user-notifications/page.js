@@ -115,9 +115,9 @@ export default function page() {
             <Link href="/user-endpoints/user-addresses">
                 <Button variant="outline"><ChevronLeft className="w-5" />&nbsp;&nbsp;Addresses</Button>
             </Link>
-            {/* <Link href="/user-endpoints/user-notifications">
-                <Button variant="outline">User Notifications &nbsp;&nbsp; <ChevronRight className="w-5" /></Button>
-            </Link> */}
+            <Link href="/products/get-products">
+                <Button variant="outline">Products / Get Products &nbsp;&nbsp; <ChevronRight className="w-5" /></Button>
+            </Link>
         </div>
     </>
 }
