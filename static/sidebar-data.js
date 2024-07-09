@@ -126,6 +126,10 @@ export default [
                 title: "Upload Image",
                 href: "/services/upload-image"
             },
+            {
+                title: "Search",
+                href: "/services/search"
+            },
         ]
     },
 

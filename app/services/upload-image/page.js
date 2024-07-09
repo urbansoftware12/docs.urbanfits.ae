@@ -39,7 +39,7 @@ export default function page() {
             <h3 className="mt-4 mb-2 font-semibold text-lg tracking-tight">Response</h3>
             <CodeBlock>{`{
     "success": true,
-    "uploadUrl": "https://urban-fits.s3.ap-south-1.amazonaws.com//user-profiles/651ab014f10bff23784dd8e8?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAWXH553KR4CPX7D3R%2F20240625%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20240625T220903Z&X-Amz-Expires=900&X-Amz-Signature=735f613109b33c6f1fc16c7b8ae3062c318fdab683a39facf22aa0bc9d3e0930&X-Amz-SignedHeaders=host&x-id=PutObject"
+    "uploadUrl": "https://urban-fits.s3.ap-south-1.amazonaws.com/user-profiles/651ab014f10bff23784dd8e8?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAWXH553KR4CPX7D3R%2F20240625%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20240625T220903Z&X-Amz-Expires=900&X-Amz-Signature=735f613109b33c6f1fc16c7b8ae3062c318fdab683a39facf22aa0bc9d3e0930&X-Amz-SignedHeaders=host&x-id=PutObject"
 }`}</CodeBlock>
         </section>
 

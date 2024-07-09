@@ -7,12 +7,13 @@ import CodeBlock from "@/components/code-block";
 export default function page() {
     return <>
         <h1 className="font-bold text-4xl tracking-tight">Get Product(s) APIs</h1>
-        <p className="leading-7 [&:not(:first-child)]:mt-6">There are four <CodeBadge>(4)</CodeBadge> APIs to get the products in different scenarios:</p>
+        <p className="leading-7 [&:not(:first-child)]:mt-6">There are five <CodeBadge>(5)</CodeBadge> APIs to get the products in different scenarios:</p>
         <ul className="list-outside list-decimal text-sm leading-7 px-5 py-3">
             <li><b>Get Products by Category ID</b>: This API will be used to get the products based on the desired category.</li>
             <li><b>Get One Product by ID</b>: This API will be used to get a single product by using the <CodeBadge>product id</CodeBadge>.</li>
             <li><b>Get Sale Products</b>: This API will return the sale products since it's not a category but the sale products have a different criteria.</li>
-            <li><b>Get Products by IDs</b>: And this API will be used to get the products corresponding to multiple IDs provided to it.</li>
+            <li><b>Get Relative Products</b>: This API will give the relative products to one product.</li>
+            <li><b>Get Index Content</b>: And this API will give you the home page content categorized under different headings.</li>
         </ul>
 
         <h2 className="mt-6 font-bold text-2xl tracking-tight">Product SKU calculation</h2>
@@ -554,6 +555,176 @@ export default function page() {
     ]
 }`}</CodeBlock>
             <p className="my-4">Now the only different between <b>Get Products by Categories</b> and this API is that the returned products by this API in response, each product will have <CodeBadge>sale_price</CodeBadge> specified along with the original <CodeBadge>price</CodeBadge>. It's just to show difference to the user but for the Sale Products, you will have to calculate things using <CodeBadge>sale_price</CodeBadge> instead of <CodeBadge>price</CodeBadge>.</p>
+        </section>
+
+        <h2 className="mt-10 font-bold text-2xl tracking-tight">4. Get Products by IDs</h2>
+        <section className="container flex flex-col">
+            <h3 className="mt-4 mb-2 font-semibold text-lg tracking-tight">Endpoint</h3>
+            <p><CodeBadge color="text-green-400">GET</CodeBadge> <CodeBadge>/products/get/relative-products</CodeBadge></p>
+
+            <h3 className="mt-4 mb-2 font-semibold text-lg tracking-tight">Payload</h3>
+            <p className="leading-7 my-2">This API expects a mandatory <CodeBadge>product_id</CodeBadge> Query Parameter which will be a product id of type <b>String</b>. Let's get some relative products by using the the product id <CodeBadge>6569d376a7fcb35928d0f1f5</CodeBadge> by using the follwing URL: <br />
+                <CodeBadge color="text-green-500">/products/get/relative-products?product_id=6569d376a7fcb35928d0f1f5</CodeBadge>
+            </p>
+
+            <h3 className="mt-4 mb-2 font-semibold text-lg tracking-tight">Response</h3>
+            <p className="mb-2">This API will return maximum 5 products which are relative to the given ID of the product. It will identify the relative products by the category relationships. It's first priority of lookup will be in the product's category's child categories and onwards down the hierarchy, and then at last it will lookup in the sibling categories. Here's the response:</p>
+            <CodeBlock>{`{
+    "success": true,
+    "msg": '',
+    "relative_products": [
+        {
+            "name": {
+                "en": "Waist Knitwear Belt Solid Color Dress",
+                "ar": "فستان ذو حزام من الصوف واللون الصلب"
+            },
+            "description": {
+                "en": "%65 RAYON % 35 POLYAMID",
+                "ar": "% 65 رايون ٪ 35 بولي أميد"
+            },
+            "seo_details": {
+                "title": "Waist Knitwear Belt Solid Color Dress",
+                "description": "%65 RAYON % 35 POLYAMID",
+                "meta_keywords": "women, belt, knitwear"
+            },
+            "shipping_details": {
+                "width": "8",
+                "height": "72",
+                "weight": 450
+            },
+            "_id": "6569fe0d6edd1997d14d9aea",
+            "cover_image": "/product-images/6569fe0d6edd1997d14d9aea/6569fe0d6edd1997d14d9aea.webp",
+            "price": 425,
+            "uf_points": null,
+            "sale_price": 399,
+            "categories": [
+                {
+                    "name": {
+                        "en": "women",
+                        "ar": "نساء"
+                    },
+                    "description": {
+                        "en": "This is a clothing category for women of the age above 18",
+                        "ar": "هذه فئة الملابس للنساء اللاتي تزيد أعمارهن عن 18 عامًا"
+                    },
+                    "_id": "64a59d5816b4c91fa1967b2e",
+                    "slug": "women/",
+                    "path": "women/",
+                    "children": [
+                        "64b5391e2c57908f1e94dc27"
+                    ],
+                    "createdAt": "2023-07-05T16:42:00.778Z",
+                    "updatedAt": "2024-05-16T20:47:35.378Z",
+                    "__v": 0
+                }
+            ],
+            "slug": "waist-knitwear-belt-solid-color-dress/",
+            "tags": [
+                "women",
+                "belt",
+                "knitwear"
+            ],
+            "active": false,
+            "ratings": 0,
+            "variants": [
+                {
+                    "color": "#14133a",
+                    "color_name": "Dark Blue",
+                    "images": [
+                        "/product-images/6569fe0d6edd1997d14d9aea/6569fe0d6edd1997d14d9aeb/0.webp",
+                        "/product-images/6569fe0d6edd1997d14d9aea/6569fe0d6edd1997d14d9aeb/1.webp",
+                        "/product-images/6569fe0d6edd1997d14d9aea/6569fe0d6edd1997d14d9aeb/2.webp"
+                    ],
+                    "sizes": [
+                        {
+                            "size": "S",
+                            "quantity": 10,
+                            "_id": "6569fe18b56ee511ddcf6e60"
+                        },
+                        {
+                            "size": "M",
+                            "quantity": 10,
+                            "_id": "6569fe18b56ee511ddcf6e61"
+                        },
+                        {
+                            "size": "L",
+                            "quantity": 10,
+                            "_id": "6569fe18b56ee511ddcf6e62"
+                        }
+                    ],
+                    "stock": 30,
+                    "_id": "6569fe18b56ee511ddcf6e5f",
+                    "sku": "UF1007-#14133a"
+                },
+                {
+                    "color": "#757575",
+                    "color_name": "Dark Grey",
+                    "images": [
+                        "/product-images/6569fe0d6edd1997d14d9aea/6569fe0d6edd1997d14d9aef/0.webp",
+                        "/product-images/6569fe0d6edd1997d14d9aea/6569fe0d6edd1997d14d9aef/1.webp",
+                        "/product-images/6569fe0d6edd1997d14d9aea/6569fe0d6edd1997d14d9aef/2.webp"
+                    ],
+                    "sizes": [
+                        {
+                            "size": "S",
+                            "quantity": 10,
+                            "_id": "6569fe18b56ee511ddcf6e64"
+                        },
+                        {
+                            "size": "M",
+                            "quantity": 10,
+                            "_id": "6569fe18b56ee511ddcf6e65"
+                        },
+                        {
+                            "size": "L",
+                            "quantity": 10,
+                            "_id": "6569fe18b56ee511ddcf6e66"
+                        }
+                    ],
+                    "stock": 30,
+                    "_id": "6569fe18b56ee511ddcf6e63",
+                    "sku": "UF1007-#757575"
+                }
+            ],
+            "bundle_items": [],
+            "createdAt": "2023-12-01T15:38:53.379Z",
+            "updatedAt": "2024-05-12T11:31:12.716Z",
+            "__v": 0,
+            "sku_number": 1007
+        }
+        // Other 4 other Relative Products if exist...
+    ]
+}`}</CodeBlock>
+        </section>
+        <h2 className="mt-10 font-bold text-2xl tracking-tight">5. Get Index Content</h2>
+        <section className="container flex flex-col">
+            <h3 className="mt-4 mb-2 font-semibold text-lg tracking-tight">Endpoint</h3>
+            <p><CodeBadge color="text-green-400">GET</CodeBadge> <CodeBadge>/get-index-content</CodeBadge></p>
+
+            <h3 className="mt-4 font-semibold text-lg tracking-tight">Payload</h3>
+            <p className="leading-7 my-2">No kind of payload is required.</p>
+
+            <h3 className="mt-4 mb-2 font-semibold text-lg tracking-tight">Response</h3>
+            <p className="mb-2">In the response, a few featured categories will returned along with their respected array of products. Each of them will be having maximum 5 products if exist.</p>
+            <CodeBlock>{`{
+            success: true,
+            msg: '',
+            latestArrivals: [
+                     //... respected products here (max 5)
+            ],
+            newCollection: [
+                     //... respected products here (max 5)
+            ],
+            womenCollection: [
+                     //... respected products here (max 5)
+            ],
+            menCollection: [
+                     //... respected products here (max 5)
+            ],
+            kidsCollection: [
+                     //.. respected products here (max 5)
+            ]
+}`}</CodeBlock>
         </section>
 
         <div className="w-full mt-20 flex justify-between">
