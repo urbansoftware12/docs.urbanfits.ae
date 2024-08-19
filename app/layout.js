@@ -1,14 +1,14 @@
 import "@/styles/globals.css";
-// import { Inconsolata, Open_Sans } from "next/font/google";
+import { Inconsolata, Open_Sans } from "next/font/google";
 // import MainLayout from "@/components/layout";
 
-// const openSans = Open_Sans({ subsets: ["latin"] });
-// export const incons = Inconsolata({ subsets: ["latin"] });
+const openSans = Open_Sans({ subsets: ["latin"] });
+export const incons = Inconsolata({ subsets: ["latin"] });
 
-// export const metadata = {
-//   title: "Urban Fits API Documentation",
-//   description: "Urban Fits Developer API documentation.",
-// };
+export const metadata = {
+  title: "Urban Fits API Documentation",
+  description: "Urban Fits Developer API documentation.",
+};
 
 export default function RootLayout({ children }) {
   return <html lang="en" suppressHydrationWarning>
